@@ -1,0 +1,78 @@
+import { Image } from 'mdx-deck'
+import { CodeSurfer } from 'mdx-deck-code-surfer';
+import { default as Prism } from 'prism-react-renderer/prism'
+import groovyLang from 'react-syntax-highlighter/languages/prism/groovy'
+import prismTheme from 'prism-react-renderer/themes/nightOwl';
+export { default as theme } from './presentation/theme';
+groovyLang(Prism)
+
+# Reduce your APK size
+
+---
+
+<img src="./00100sPORTRAIT_00100_BURST20190105145409776_COVER.jpg" height="200" width="200" style={{ borderRadius: '50%', objectFit: 'cover' }}/>
+
+## @peterlazar1993
+
+Sr. Developer @ [Black Lotus](https://blacklotusapp.org/)
+
+---
+
+## Users love smaller apps
+
+---
+
+## Tips
+1. Analyse APK
+2. Split ABI
+3. Optimize PNG
+4. Library Bloat
+5. App Bundles
+
+---
+
+## Analyse APK
+
+[APK Analyzer](https://developer.android.com/studio/build/apk-analyzer.html)
+
+- Drag and drop production APK to Android Studio
+
+---
+
+<CodeSurfer
+code={require("!raw-loader!./presentation/snippets/build.gradle")}
+theme={prismTheme}
+title="Split ABI"
+lang="groovy"
+notes=""
+showNumbers
+steps={[
+{ lines: [19], notes: "Set to true" },
+{ lines: [38], notes: "Bonus: Rename app" }]}
+/>
+
+---
+
+## Optmize PNGs
+
+[ImageOptim](https://imageoptim.com/mac) - Mac 
+
+[ImageOptim alternatives](https://imageoptim.com/versions)
+
+---
+
+## Library Bloat
+
+[react-native-bundle-visualizer](https://github.com/IjzerenHein/react-native-bundle-visualizer)
+
+Eg. RN-Vector-Icons
+
+---
+
+## Android App Bundles
+
+[App Bundles](https://developer.android.com/platform/technology/app-bundle)
+
+---
+
+Fín
