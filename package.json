@@ -6,7 +6,8 @@
   "scripts": {
     "start": "mdx-deck workshop.mdx",
     "build": "mdx-deck build --no-html workshop.mdx -d .build",
-    "deploy": "netlifyctl deploy -P ./.build -n rneu-interactions"
+    "deploy": "netlifyctl deploy -P ./.build -n rneu-interactions",
+    "now-build": "mdx-deck build workshop.mdx --no-html && cp -r ./presentation/images dist/presentation && cp -r ./presentation/snippets dist/"
   },
   "devDependencies": {
     "mdx-deck": "^1.7.1",
